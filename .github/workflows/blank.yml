@@ -14,7 +14,7 @@ jobs:
 
       - name: Find and List Stale Branches
         run: |
-          THRESHOLD_DATE=$(date -d "6 months ago" --utc +%Y-%m-%dT%H:%M:%SZ)
+          THRESHOLD_DATE=$(date -d "2 months ago" +%Y-%m-%dT%H:%M:%SZ)
           echo "Branches last updated before: $THRESHOLD_DATE"
 
           # Find branches older than 6 months
