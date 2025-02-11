@@ -18,6 +18,5 @@ jobs:
           echo "Branches last updated before: $THRESHOLD_DATE"
 
           # Find branches older than 6 months
-          git for-each-ref --format '%(refname:short) %(committerdate:iso8601)' refs/remotes/origin | awk -v date="$THRESHOLD_DATE" '$2 < date {print $1}'
-
+          git for-each-ref --format '%(refname:short) %(committerdate:iso8601)' refs/remotes/origin
       
